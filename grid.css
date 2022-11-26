@@ -1,0 +1,101 @@
+main {
+    background-color: #598fd6;
+}
+
+section, aside, footer {
+    background-color: white;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.6em;
+}
+
+header {
+    background-color: #1358b3;
+    box-shadow: 0px 5px 20px #000;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    padding-right: 20px;
+}
+
+.menu{
+    color: white;
+    display: inline-flex;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a.menuLink{
+    color:white;
+    text-decoration: none;
+}
+
+p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+}
+
+article{
+    background-color: white;
+}
+
+article img{
+    width: 50rem;
+    padding: 10px;
+}
+
+aside img{
+    width: 50rem;
+    padding: 10px;
+}
+
+.header { grid-area: header; }
+.section { grid-area: section; }
+.aside { grid-area: aside; }
+.footer { grid-area: footer; }
+
+.main {
+    display: grid;
+    padding: 2%;
+    row-gap: 3px;
+    column-gap: 3px;
+    grid-template-areas: 
+    'header'
+    'section'
+    'aside'
+    'footer';
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        grid-template-areas: 
+        'header header header'
+        'section section aside'
+        'footer footer footer';
+    }
+}
+
+@media screen and (min-width:1024px){
+    .main {
+        grid-template-areas:
+        'header header header header'
+        'section section aside'
+        'footer footer footer';
+    }
+}
+
